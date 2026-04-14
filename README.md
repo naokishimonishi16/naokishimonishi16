@@ -14,15 +14,6 @@
 - **Econometrics Tools:** `tidyverse`, `fixest`, `modelsummary`
 - **Other Tools:** LaTeX
 
-## 🛠 Tech Stack
-![R](https://img.shields.io/badge/R-276DC3?style=for-the-badge&logo=r&logoColor=white)
-![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-
-- **Data Analysis:** 因果推論 (DID, IV, RDD), 機械学習 (CLIP, CNN)
-- **Econometrics Tools:** `tidyverse`, `fixest`, `modelsummary`
-- **Other Tools:** Mac, LaTeX, Git
-
 ## 📂 Featured Projects 1
 ### Data Science for Strategic Pricing
 - **概要:** 計量経済学や機械学習の手法を使って価格設定について学びました。
