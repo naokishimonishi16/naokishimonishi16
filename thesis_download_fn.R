@@ -1,9 +1,10 @@
+#学校給食の画像をダウンロードするウェブスクレイピングのコード
 rm(list = ls())
 library(rvest)
 library(dplyr)
 library(stringr)
 
-#仰高小、目白小、要小、高松小を除く各小学校の名前
+#各小学校の名前
 toshima_names <- c("komagome",
                   "sugamo",
                   "seiwa",
@@ -25,28 +26,8 @@ toshima_names <- c("komagome",
                   "chihaya",
                   "sakura")
 
-#各小学校のHPのurl
-toshima_urls <- c("https://toshima.schoolweb.ne.jp/1310116/weblog?category=970017&tm=20251126082549&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310117/weblog?category=970026&tm=20251125175101&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310118/weblog?category=970035&tm=20251118141614&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310119/weblog?category=970045&tm=20251125145304&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310120/weblog?category=970055&tm=20251104150740&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310121/weblog?category=970066&tm=20251125125945&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310122/weblog?category=970077&tm=20251121201032&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310123/weblog?category=970086&tm=20251121104714&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310125/weblog?category=970097&tm=20251113162934&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310126/weblog?category=970106&tm=20251121143008&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310128/weblog?category=970119&tm=20251126121114&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310139/weblog?category=970230&tm=20251125162657&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310129/weblog?category=970132&tm=20251125143359&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310131/weblog?category=970156&tm=20251125124642&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310132/weblog?category=970166&tm=20251125141113&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310133/weblog?category=970177&tm=20251121130432&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310134/weblog?category=970187&tm=20251031120009&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310136/weblog?category=970211&tm=20251125152020&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310135/weblog?category=970198&tm=20251114111914&blog_page=",
-                  "https://toshima.schoolweb.ne.jp/1310137/weblog?category=970221&tm=20251028081638&blog_page="
-                  )
+#各小学校のHPのurlがここに入る
+toshima_urls <- c("","","","","","","","","","","","","","","","","","")
 
 #スクレーピングの関数
 scrape_toshima_school <- function(school_name, base_url, page_range) {
@@ -280,7 +261,7 @@ scrape_toshima_school <- function(school_name, base_url, page_range) {
 }
 
 
-# 豊島区内対象18校の小学校の給食画像を保存(各1~50ページまで)
+# 対象の画像を保存(各1~50ページまで)
 for (i in 1:18) {
   scrape_toshima_school(toshima_names[i], toshima_urls[i], page_range = 1:50)
 }
