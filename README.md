@@ -18,7 +18,3 @@
 - **技術:** R
 - 整形済みのデータからパネルデータを作成し分析を行ったコード（thesis_analysis1.R, thesis_analysis2.R）と、
 - 画像をウェブスクレーピングでダウンロードするコード（thesis_download_fn.R）をアップロードしています。
-
-## 📫 Contact
-- [LinkedInなどへのリンク]
-- [Email]
