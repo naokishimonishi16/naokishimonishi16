@@ -11,7 +11,7 @@
 - **Econometrics Tools:** `tidyverse`, `fixest`, `modelsummary`
 - **Other Tools:** LaTeX
 
-## 📂 Featured Projects 4
+## 📂 Featured Project
 ### 卒業論文
 - **概要:** 計量経済学や機械学習の手法を使って価格設定について学びました。
 - **技術:** R
